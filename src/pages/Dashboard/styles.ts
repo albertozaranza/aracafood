@@ -4,7 +4,7 @@ export const FoodsContainer = styled.div`
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 32px;
   margin-top: -140px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,6 +19,5 @@ export const FoodsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 32px;
   }
 `;

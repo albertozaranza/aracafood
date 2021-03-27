@@ -12,6 +12,12 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    img {
+      @media (max-width: 425px) {
+        width: 70%;
+      }
+    }
+
     nav {
       div {
         button {
@@ -27,6 +33,10 @@ export const Container = styled.div`
 
           .text {
             padding: 16px 24px;
+
+            @media (max-width: 425px) {
+              display: none;
+            }
           }
 
           .icon {
@@ -35,13 +45,13 @@ export const Container = styled.div`
             background: #41c900;
             border-radius: 0 8px 8px 0;
             margin: 0 auto;
+
+            @media (max-width: 425px) {
+              border-radius: 8px;
+            }
           }
         }
       }
-    }
-
-    @media (max-width: 1024px) {
-      padding: 0 32px 160px;
     }
   }
 `;
