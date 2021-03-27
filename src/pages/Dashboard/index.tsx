@@ -16,7 +16,7 @@ interface FoodPlate {
   image: string;
 }
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   const [foods, setFoods] = useState<FoodPlate[]>([]);
   const [editingFood, setEditingFood] = useState<FoodPlate>({} as FoodPlate);
   const [modalOpen, setModalOpen] = useState(false);

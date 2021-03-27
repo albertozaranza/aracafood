@@ -11,10 +11,12 @@ export const Form = styled(Unform)`
     line-height: 36px;
     margin-bottom: 40px;
   }
+
   button {
     margin-top: 48px;
     align-self: flex-end;
   }
+
   button {
     font-weight: 600;
     border-radius: 8px;
@@ -27,6 +29,7 @@ export const Form = styled(Unform)`
     .text {
       padding: 16px 24px;
     }
+
     .icon {
       display: flex;
       padding: 16px 16px;
