@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   header {
     width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 32px 160px;
     display: flex;

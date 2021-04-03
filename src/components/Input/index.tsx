@@ -14,11 +14,14 @@ import { Container } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  // eslint-disable-next-line react/require-default-props
   icon?: React.ComponentType<IconBaseProps>;
 }
 
-const Input: React.FC<InputProps> = ({ name, icon: Icon }: InputProps) => {
+const Input: React.FC<InputProps> = ({
+  name,
+  icon: Icon,
+  ...rest
+}: InputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -53,6 +56,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon }: InputProps) => {
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
+        {...rest}
       />
     </Container>
   );
