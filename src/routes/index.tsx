@@ -1,15 +1,10 @@
-import { Switch, Route } from 'react-router-dom';
+import AdminRoutes from './admin.route';
+import PublicRoutes from './public.route';
 
-import Dashboard from '../pages/Dashboard';
-import AddFood from '../pages/AddFood';
-import EditFood from '../pages/EditFood';
+const signed = false;
 
 const Routes: React.FC = () => (
-  <Switch>
-    <Route path="/" exact component={Dashboard} />
-    <Route path="/add-food" exact component={AddFood} />
-    <Route path="/edit-food" exact component={EditFood} />
-  </Switch>
+  <>{signed ? <AdminRoutes /> : <PublicRoutes />}</>
 );
 
 export default Routes;
