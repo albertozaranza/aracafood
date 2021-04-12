@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
   h2 {
     margin-top: 32px;
     color: #c72828;
@@ -9,10 +12,13 @@ export const Container = styled.div`
   }
 
   footer {
+    width: 100%;
+    max-width: 1200px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-self: center;
     padding: 0 60px;
 
     button {
@@ -29,11 +35,17 @@ export const Container = styled.div`
         background: ${darken(0.06, '#c72828')};
       }
     }
+
+    strong {
+      color: #999;
+    }
   }
 `;
 
 export const ProductTable = styled.table`
   width: 100%;
+  max-width: 1200px;
+  align-self: center;
 
   thead th {
     color: #999;
