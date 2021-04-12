@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { FiPlus, FiMinus } from 'react-icons/fi';
+import { useCart } from '../../hooks/useCart';
 
 import { Container } from './styles';
 
@@ -18,16 +17,10 @@ interface FoodProps {
 }
 
 const PublicFood: React.FC<FoodProps> = ({ food, isAvailable }: FoodProps) => {
-  const [amount, setAmount] = useState<number>(0);
+  const { addFoodPlate } = useCart();
 
-  const addItem = () => {
-    setAmount(amount + 1);
-  };
-
-  const removeItem = () => {
-    if (amount > 0) {
-      setAmount(amount - 1);
-    }
+  const handleAddFood = (foodPlateId: number) => {
+    addFoodPlate(foodPlateId);
   };
 
   return (
@@ -44,27 +37,14 @@ const PublicFood: React.FC<FoodProps> = ({ food, isAvailable }: FoodProps) => {
       </section>
       {isAvailable && (
         <section className="footer">
-          <div className="icon-container">
-            <button
-              type="button"
-              className="icon"
-              onClick={removeItem}
-              data-testid={`edit-food-${food.id}`}
-            >
-              <FiMinus size={20} />
-            </button>
-
-            <input type="number" disabled value={amount} />
-
-            <button
-              type="button"
-              className="icon"
-              onClick={addItem}
-              data-testid={`remove-food-${food.id}`}
-            >
-              <FiPlus size={20} />
-            </button>
-          </div>
+          <button
+            type="button"
+            className="add-food"
+            onClick={() => handleAddFood(food.id)}
+            data-testid={`remove-food-${food.id}`}
+          >
+            Adicionar ao carrinho
+          </button>
         </section>
       )}
     </Container>

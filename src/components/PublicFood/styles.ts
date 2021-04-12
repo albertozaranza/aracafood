@@ -72,6 +72,7 @@ export const Container = styled.div<ContainerProps>`
 
   section.footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 20px 30px;
     background: #e4e4eb;
@@ -179,6 +180,16 @@ export const Container = styled.div<ContainerProps>`
           transform: translateX(32px);
         }
       }
+    }
+
+    button.add-food {
+      width: 100%;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      border: none;
     }
   }
 `;

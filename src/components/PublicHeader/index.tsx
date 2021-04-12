@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         <img src={Logo} alt="GoRestaurant" />
         <nav>
           <div>
-            <button type="button" onClick={() => history.push('/')}>
+            <button type="button" onClick={() => history.push('/cart')}>
               <div className="text">Carrinho</div>
               <div className="icon">
                 <FiShoppingCart size={24} />
